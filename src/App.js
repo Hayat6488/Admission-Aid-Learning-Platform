@@ -1,11 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider, createTheme, Paper, Typography, styled, Switch } from '@mui/material';
+import { RouterProvider } from 'react-router-dom';
+import { routes } from './Routes/Routes/Routes';
+import { useContext } from 'react';
+import { data } from './Contexts/ContextProvider';
+
 
 function App() {
+
+  const {mode} = useContext(data);
+
+  const theme = createTheme({
+    palette: {
+      mode: mode ? "light" : "dark"
+    }
+  });
+
   return (
-    <div className="App">
-      
-    </div>
+    <ThemeProvider theme={theme}>
+      <Paper>
+        <div className="App">
+          <RouterProvider router={routes}></RouterProvider>
+        </div>
+      </Paper>
+    </ThemeProvider>
+
   );
 }
 
