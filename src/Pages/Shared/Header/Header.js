@@ -2,16 +2,16 @@ import { AppBar, Button, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 // import './header.css'
 import { useContext } from 'react';
-import { data } from '../../../Contexts/ContextProvider';
+import { SubContext } from '../../../Contexts/ContextProvider';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
 
-    const { mode, setMode } = useContext(data);
+    const { mode, setMode } = useContext(SubContext);
 
     return (
-        <div style={{marginBottom: "80px"}}>
+        <div style={{marginBottom: "60px"}}>
             <AppBar positions="sticky">
                 <Toolbar style={{
                     display: "flex",

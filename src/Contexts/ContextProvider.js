@@ -1,18 +1,27 @@
 import React, { createContext, useState } from 'react';
+import { useEffect } from 'react';
 
-export const data = createContext();
+export const SubContext = createContext();
 
 const ContextProvider = ({children}) => {
 
+    const [subjects,setSubjects] = useState([]);
+
+    useEffect(()=> {
+        fetch('https://admission-aid-server.vercel.app/subjects')
+        .then(res => res.json())
+        .then(data => setSubjects(data))
+    },[])
+
     const [mode, setMode] = useState(true);
     
-    const dataInfo = { mode, setMode };
+    const dataInfo = { mode, setMode, subjects };
 
     return (
         <div>
-            <data.Provider value={dataInfo}>
+            <SubContext.Provider value={dataInfo}>
                 {children}
-            </data.Provider>
+            </SubContext.Provider>
         </div>
     );
 };

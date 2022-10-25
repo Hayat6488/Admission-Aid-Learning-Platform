@@ -3,12 +3,12 @@ import { ThemeProvider, createTheme, Paper, Typography, styled, Switch } from '@
 import { RouterProvider } from 'react-router-dom';
 import { routes } from './Routes/Routes/Routes';
 import { useContext } from 'react';
-import { data } from './Contexts/ContextProvider';
+import { SubContext } from './Contexts/ContextProvider';
 
 
 function App() {
 
-  const {mode} = useContext(data);
+  const {mode} = useContext(SubContext);
 
   const theme = createTheme({
     palette: {
