@@ -2,14 +2,26 @@ import { Button } from '@mui/material';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { SubContext } from '../../Contexts/ContextProvider';
+import {teal} from '@mui/material/colors'
 
 const Sidebar = () => {
 
-    const {subjects} = useContext(SubContext);
-    console.log(subjects);
+    const {mode, subjects} = useContext(SubContext);
+    console.log(mode);
+    const primary = teal[300];
 
     return (
-        
+        <div 
+        style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "30px",
+                padding: "0 30px"
+                }} color= "primary">
+            {
+                subjects.map(sub => <Button  variant="contained" color={`${mode ? "primary" : "success"}`}><Link>{sub?.title}</Link></Button>)
+            }
+        </div>
     );
 };
 
