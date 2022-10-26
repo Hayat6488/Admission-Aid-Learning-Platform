@@ -2,6 +2,7 @@ import './Subject.css'
 import React, { useContext } from 'react';
 import { SubContext } from '../../Contexts/ContextProvider';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 const Subject = (props) => {
@@ -15,7 +16,7 @@ const Subject = (props) => {
             <div className='sub-details'>
                 <p>Class: {lec}</p>
                 <p>Tk. {price}</p>
-                <Button variant="">Details</Button>
+                <Button variant=""><Link to={`/courses/${id}`}>Details</Link></Button>
             </div>
         </div>
     );

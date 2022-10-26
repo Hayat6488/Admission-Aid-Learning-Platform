@@ -3,6 +3,7 @@ import Main from "../../LayOut/Main";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Courses from "../../Pages/Courses/Courses";
 import Faqs from "../../Pages/Faqs/Faqs";
+import SubjectDetails from "../../Pages/SubjectDetails/SubjectDetails";
 
 export const routes = createBrowserRouter([
     {
@@ -20,6 +21,11 @@ export const routes = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>
+            },
+            {
+                path: '/courses/:id',
+                loader: ({params}) => fetch(`https://admission-aid-server.vercel.app/subjects/${params.id}`),
+                element: <SubjectDetails></SubjectDetails>
             }
         ]
     }
