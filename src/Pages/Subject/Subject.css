@@ -20,3 +20,14 @@
 .light img{
     border-radius: 5px;
 }
+
+.sub-details{
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-details p{
+    margin: 0 10px;
+}
