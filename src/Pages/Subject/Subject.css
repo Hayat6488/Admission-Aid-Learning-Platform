@@ -1,0 +1,22 @@
+.dark{
+    background-color: #66bb6a;
+    padding: 2px;
+    border: 1px solid #66bb6a;
+    border-radius: 5px;
+}
+
+.light{
+    background-color: #1976d2;
+    color: white;
+    padding: 2px;
+    border: 1px solid #66bb6a;
+    border-radius: 5px;
+}
+
+.dark img{
+    border-radius: 5px;
+}
+
+.light img{
+    border-radius: 5px;
+}

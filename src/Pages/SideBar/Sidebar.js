@@ -7,7 +7,6 @@ import {teal} from '@mui/material/colors'
 const Sidebar = () => {
 
     const {mode, subjects} = useContext(SubContext);
-    console.log(mode);
     const primary = teal[300];
 
     return (
