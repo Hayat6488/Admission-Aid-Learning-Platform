@@ -9,6 +9,7 @@ import Cards from "../../Pages/Cards/Cards";
 import Error from "../../Pages/ErrorPage/Error";
 import LogIn from "../../Pages/LogIn/LogIn";
 import Register from "../../Pages/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses/checkout/:id',
                 loader: ({params}) => fetch(`https://admission-aid-server.vercel.app/subjects/${params.id}`),
-                element: <CheckOut></CheckOut>
+                element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>
             }
         ]
     },

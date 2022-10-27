@@ -51,7 +51,7 @@ const Header = () => {
                             mode ? <Button onClick={() => setMode(!mode)} variant="secondary">Dark</Button> : <Button onClick={() => setMode(!mode)} variant="error">Light</Button>
                         }
                         {
-                            user?.email ?
+                            user?.uid ?
                                     <>
                                         <Button onClick={handleLogOut} variant="secondary">Log Out</Button>
                                         {
