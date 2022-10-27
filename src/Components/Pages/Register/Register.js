@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Register.css'
 import { Form, Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider';
+import Header from '../Shared/Header/Header';
 
 const Register = () => {
+
+    const {createUseer} = useContext(AuthContext);
+
+    const [error, setError] = useState('');
 
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const pass = form.pass.value;
+        const password = form.pass.value;
         const img = form.img.value;
-        console.log(name, email, pass, img)
+        createUseer(email,password)
+        .then(result => {
+            const user = result.user;
+            form.reset();
+            setError(error.message);
+
+        })
+        .catch(error => {
+            setError(error.message);
+        })
     }
 
     return (
-        <div className='main-container'>
+        <div>
+            <Header></Header>
+            <div className='main-container'>
             <div className='log-in-container'>
                 <Form onSubmit={handleRegister}>
                     <div><label><b>Name: </b></label></div>
@@ -31,6 +48,7 @@ const Register = () => {
                 <h4>Already Registered! Please <Link to='/login'>Log In</Link></h4>
 
             </div>
+        </div>
         </div>
     );
 };
