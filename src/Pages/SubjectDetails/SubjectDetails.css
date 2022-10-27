@@ -1,8 +1,25 @@
-.dark{
-    padding: 60px 0;
-    
+.des{
+    padding: 40px 0;
+}
+.description{
+    width: 50%;
 }
 
-.light{
+.description-container{
+    display: flex;
+    justify-content: center;
+}
 
+.des h4{
+    margin: 10px;
+}
+.des h2{
+    margin: 16px;
+}
+.des h3{
+    margin: 14px;
+}
+
+.des h5{
+    font-size: 20px;
 }
