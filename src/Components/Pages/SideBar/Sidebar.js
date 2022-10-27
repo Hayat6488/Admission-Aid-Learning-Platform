@@ -15,7 +15,8 @@ const Sidebar = () => {
                 display: "flex",
                 flexDirection: "column",
                 gap: "30px",
-                padding: "0 30px"
+                padding: "0 30px",
+                marginTop: "72px"
                 }} color= "primary">
             {
                 subjects.map(sub => <Button  variant="contained" color={`${mode ? "primary" : "success"}`}><Link to={`/courses/${sub.id}`}>{sub?.title}</Link></Button>)

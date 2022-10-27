@@ -1,9 +1,9 @@
 import './App.css';
 import { ThemeProvider, createTheme, Paper, Typography, styled, Switch } from '@mui/material';
 import { RouterProvider } from 'react-router-dom';
-import { routes } from './Routes/Routes/Routes';
+import { routes } from './Components/Routes/Routes/Routes';
 import { useContext } from 'react';
-import { SubContext } from './Contexts/ContextProvider';
+import { SubContext } from './Components/Contexts/ContextProvider';
 
 
 function App() {

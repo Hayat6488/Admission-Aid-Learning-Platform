@@ -9,6 +9,7 @@ const Cards = () => {
 
     return (
         <div>
+            <h2>All Courses</h2>
             <Grid lg={12} item container spacing={2}>
                 {
                     subjects.map(subject => <Grid item lg={3} sm={6} xs={12}><Subject key={subject.id} subject={subject}></Subject></Grid>)

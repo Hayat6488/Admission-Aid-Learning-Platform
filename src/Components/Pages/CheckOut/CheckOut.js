@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 import React from 'react';
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { SubContext } from '../Contexts/ContextProvider';
+import { SubContext } from '../../Contexts/ContextProvider';
 import './checkout.css'
 
 const CheckOut = () => {

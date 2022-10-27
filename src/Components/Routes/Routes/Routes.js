@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import CheckOut from "../../CheckOut/CheckOut";
+import CheckOut from "../../Pages/CheckOut/CheckOut";
 import Main from "../../LayOut/Main";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Courses from "../../Pages/Courses/Courses";
 import Faqs from "../../Pages/Faqs/Faqs";
 import SubjectDetails from "../../Pages/SubjectDetails/SubjectDetails";
+import Cards from "../../Pages/Cards/Cards";
 
 export const routes = createBrowserRouter([
     {
@@ -13,15 +14,7 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/courses',
-                element: <Courses></Courses>
-            },
-            {
-                path: '/FAQs',
-                element: <Faqs></Faqs>
-            },
-            {
-                path: '/blogs',
-                element: <Blogs></Blogs>
+                element: <Cards></Cards>
             },
             {
                 path: '/courses/:id',
@@ -34,5 +27,13 @@ export const routes = createBrowserRouter([
                 element: <CheckOut></CheckOut>
             }
         ]
+    },
+    {
+        path: '/FAQs',
+        element: <Faqs></Faqs>
+    },
+    {
+        path: '/blogs',
+        element: <Blogs></Blogs>
     }
 ])
