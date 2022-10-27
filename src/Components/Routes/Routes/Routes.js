@@ -6,6 +6,7 @@ import Courses from "../../Pages/Courses/Courses";
 import Faqs from "../../Pages/Faqs/Faqs";
 import SubjectDetails from "../../Pages/SubjectDetails/SubjectDetails";
 import Cards from "../../Pages/Cards/Cards";
+import Error from "../../Pages/ErrorPage/Error";
 
 export const routes = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const routes = createBrowserRouter([
                 path: '/courses/checkout/:id',
                 loader: ({params}) => fetch(`https://admission-aid-server.vercel.app/subjects/${params.id}`),
                 element: <CheckOut></CheckOut>
+            },
+            {
+                path: '*',
+                element: <Error></Error>
             }
         ]
     },
