@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import CheckOut from "../../CheckOut/CheckOut";
 import Main from "../../LayOut/Main";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Courses from "../../Pages/Courses/Courses";
@@ -26,6 +27,11 @@ export const routes = createBrowserRouter([
                 path: '/courses/:id',
                 loader: ({params}) => fetch(`https://admission-aid-server.vercel.app/subjects/${params.id}`),
                 element: <SubjectDetails></SubjectDetails>
+            },
+            {
+                path: '/courses/checkout/:id',
+                loader: ({params}) => fetch(`https://admission-aid-server.vercel.app/subjects/${params.id}`),
+                element: <CheckOut></CheckOut>
             }
         ]
     }

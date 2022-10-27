@@ -18,7 +18,7 @@ const Sidebar = () => {
                 padding: "0 30px"
                 }} color= "primary">
             {
-                subjects.map(sub => <Button  variant="contained" color={`${mode ? "primary" : "success"}`}><Link>{sub?.title}</Link></Button>)
+                subjects.map(sub => <Button  variant="contained" color={`${mode ? "primary" : "success"}`}><Link to={`/courses/${sub.id}`}>{sub?.title}</Link></Button>)
             }
         </div>
     );

@@ -28,7 +28,7 @@ const SubjectDetails = () => {
                         <h5>{des}</h5>
                     </div>
                 </div>
-                <Button variant="contained" color={`${mode ? "success" : "primary"}`}><Link to={`/courses/${id}`}>Get Premium Access</Link></Button>
+                <Button variant="contained" color={`${mode ? "success" : "primary"}`}><Link to={`/courses/checkout/${id}`}>Get Premium Access</Link></Button>
             </div>
         </div>
     );

@@ -6,7 +6,6 @@ import Subject from '../Subject/Subject';
 const Cards = () => {
 
     const { subjects } = useContext(SubContext);
-    console.log(subjects);
 
     return (
         <div>

@@ -1,0 +1,11 @@
+.check-out-container{
+    display: flex;
+    justify-content: center;
+    height: 560px;
+    align-items: center;
+}
+
+.check-out-container img{
+    height: 300px;
+    margin-right: 3%;
+}
