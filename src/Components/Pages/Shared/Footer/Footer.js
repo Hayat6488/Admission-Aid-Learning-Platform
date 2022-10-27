@@ -3,7 +3,8 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <h1>Footer</h1>
+            <h1>All rights reserved to Admission Aid Gorup.</h1>
+            <h4>Loc: 4th Floor Gulzar Tower, ChawkBaar, Chittagong</h4>
         </div>
     );
 };
